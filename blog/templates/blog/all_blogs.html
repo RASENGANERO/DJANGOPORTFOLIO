@@ -1,0 +1,6 @@
+Hello blog!
+{% for bl in blogs %}
+    <a href="{% url 'blog:detail' bl.id %}"><h1>{{ bl.title }}</h1></a>
+    <h2>{{ bl.date }}</h2>
+    <p>{{ bl.description }}</p>
+{% endfor %}

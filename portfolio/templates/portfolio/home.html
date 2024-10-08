@@ -1,0 +1,14 @@
+{% load static %}
+
+<h1>Red</h1>
+<img src="{% static 'portfolio/rasengan.png' %}"/>
+<a href="{% static 'portfolio/potter.pdf' %}">Potter</a>
+{% for prj in projects %}
+    <h2>{{ prj.title }}</h2>
+    <p>{{ prj.description }}</p>
+   
+    <img src="{{ prj.image }}"/>
+    {% if prj.url %}
+        <a href="{{ prj.url }}">Link</a>
+    {% endif %}
+{% endfor %}
